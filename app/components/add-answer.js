@@ -14,6 +14,7 @@ export default Ember.Component.extend({
         body: this.get('body') ? this.get('body') : "",
         author: this.get('author') ? this.get('author') : "",
         date: new Date(),
+        rating: 0,
         question: this.get('question')
       }
       this.sendAction('addAnswer', params);

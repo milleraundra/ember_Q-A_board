@@ -47,6 +47,18 @@ export default Ember.Route.extend({
         question.save();
       });
       this.transitionTo('single-question');
+    },
+    plusRating(answer) {
+      var ratingCount = answer.get('rating');
+      answer.set('rating', ratingCount +=1);
+      answer.save();
+      this.transitionTo('single-question');
+    },
+    decreaseRating(answer) {
+      var ratingCount = answer.get('rating');
+      answer.set('rating', ratingCount -=1);
+      answer.save();
+      this.transitionTo('single-question');
     }
   }
 });
