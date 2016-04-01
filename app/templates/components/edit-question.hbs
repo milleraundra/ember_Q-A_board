@@ -7,11 +7,11 @@
       </div>
       <div class="input-field">
         <label for="body"></label>
-        {{input type="text" value=question.body}}
+        {{textarea rows="5" type="text" value=question.body}}
       </div>
-      <button {{action 'updateQuestion' question}}>Submit</button>
+      <button class="btn"{{action 'updateQuestion' question}}>Submit</button>
     </form>
   </form>
 {{else}}
-  <a {{action 'showEditForm'}} class="btn blue-grey lighten-3">Edit</a>
+  <a {{action 'showEditForm'}} class="btn blue-grey lighten-3 right-align">Edit</a>
 {{/if}}

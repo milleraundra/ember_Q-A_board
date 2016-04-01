@@ -7,9 +7,6 @@ export default Ember.Route.extend({
   },
   actions: {
     updateQuestion(params, question) {
-      // console.log(params.body);
-      // console.log(question);
-      // debugger;
       Object.keys(params).forEach(function(key) {
         if(params[key]) {
           question.set(key, params[key]);
@@ -17,6 +14,19 @@ export default Ember.Route.extend({
       });
       question.save();
       this.transitionTo('single-question');
+    },
+    addAnswer(params) {
+      console.log(params);
+      var newAnswer = this.store.createRecord('answer', params);
+      newAnswer.save();
+      debugger;
+      this.transitionTo('single-question');
+
+      // var question = params.question;
+      // question.get('answers').addObject(newAnswer);
+      // newAnswer.save().then(function() {
+      //   question.save();
+      // });
     }
   }
 });
