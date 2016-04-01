@@ -15,8 +15,6 @@ export default Ember.Component.extend({
         author: this.get('author') ? this.get('author') : "",
         date: new Date()
       };
-      debugger;
-      console.log(params);
       this.sendAction('createQuestion', params);
       this.set('isQuestionFormShowing', false);
     }

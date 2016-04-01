@@ -3,7 +3,7 @@
     <h2>Recent Questions:</h2>
     <ul>
       {{#each model.questions as |question|}}
-      {{question-tile question=question}}
+        {{question-tile question=question}}
       {{/each}}
     </ul>
     {{add-question createQuestion="createQuestion"}}
