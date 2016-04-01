@@ -25,7 +25,6 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
     addAnswer(params) {
-      console.log(params);
       var newAnswer = this.store.createRecord('answer', params);
       var question = params.question;
       question.get('answers').addObject(newAnswer);
