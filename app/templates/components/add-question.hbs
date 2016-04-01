@@ -1,7 +1,19 @@
-{{#if addQuestionFormShowing }}
-  <form {{action 'addQuestion'}}>
-    <label for=""></label>
+{{#if isQuestionFormShowing }}
+  <form>
+    <div class="input-field">
+      <label for="title">Title:</label>
+      {{input type="text" value=title}}
+    </div>
+    <div class="input-field">
+      <label for="question">Question:</label>
+      {{input type="text" value=question}}
+    </div>
+    <div class="input-field">
+      <label for="body">Explanation:</label>
+      {{input type="text" value=body}}
+    </div>
+    <button {{action 'addQuestion'}}>Submit</button>
   </form>
 {{else}}
-
+  <button {{action 'showQuestionForm'}}>Ask Question</button>
 {{/if}}
