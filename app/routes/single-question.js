@@ -18,15 +18,24 @@ export default Ember.Route.extend({
     addAnswer(params) {
       console.log(params);
       var newAnswer = this.store.createRecord('answer', params);
-      newAnswer.save();
-      debugger;
+      var question = params.question;
+      question.get('answers').addObject(newAnswer);
+      newAnswer.save().then(function() {
+        question.save();
+      });
       this.transitionTo('single-question');
-
-      // var question = params.question;
-      // question.get('answers').addObject(newAnswer);
-      // newAnswer.save().then(function() {
-      //   question.save();
-      // });
-    }
+    },
+    // addAnswer2(question) {
+    //   var params = {
+    //     body: "Hi!",
+    //     author: "Aundra",
+    //     date: new Date(),
+    //     question: question
+    //   };
+    //   debugger;
+    //   var thing = this.store.createRecord('answer', params);
+    //   thing.save();
+    //   this.transitionTo('single-question');
+    // }
   }
 });

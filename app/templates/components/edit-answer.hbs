@@ -1,0 +1,13 @@
+{{#if isEditFormShowing}}
+  <form>
+    <form>
+      <div class="input-field">
+        <label for="body"></label>
+        {{textarea type="text" value=answer.body}}
+      </div>
+      <button class="btn"{{action 'updateAnswer' answer}}>Submit</button>
+    </form>
+  </form>
+{{else}}
+  <a {{action 'showEditForm'}} class="btn blue-grey lighten-3 right-align">Edit</a>
+{{/if}}

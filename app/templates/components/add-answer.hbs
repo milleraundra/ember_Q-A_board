@@ -4,7 +4,7 @@
     {{input type="text" value=author}}
     <label for="body">Body:</label>
     {{textarea type="text" value=body}}
-    <button {{ action 'addAnswer' question }}class="btn">Submit</button>
+    <button {{ action 'addAnswer' }}class="btn">Submit</button>
   </form>
 {{else}}
   <a {{action 'showAddAnswer'}}class="btn deep-orange lighten-1">Answer</a>

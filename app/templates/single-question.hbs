@@ -14,10 +14,14 @@
             </div>
             <div class="col s12 m6">
               {{edit-question question=model updateQuestion="updateQuestion"}}
+              <!-- <h2 {{action 'addAnswer2' model}}>Click me to add an answer!</h2> -->
             </div>
           </div>
         </div>
       </div>
     </div>
+    {{#each model.answers as |answer|}}
+    {{answer-tile answer=answer}}
+    {{/each}}
   </div>
 </div>
