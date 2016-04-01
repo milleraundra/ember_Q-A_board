@@ -9,11 +9,12 @@
         <div class="card-action">
           <div class="row">
             <div class="col s12">
-              {{edit-answer answer=answer editAnswer="editAnswer"}}
+              {{edit-answer
+                answer=answer
+                question=question
+                editAnswer="editAnswer"
+                deleteAnswer="deleteAnswer"}}
             </div>
-            <!-- <div class="col s12 m6">
-              {{edit-question question=model updateQuestion="updateQuestion"}}
-            </div> -->
           </div>
         </div>
       </div>

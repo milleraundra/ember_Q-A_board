@@ -6,7 +6,10 @@
         {{textarea type="text" value=answer.body}}
       </div>
       <button class="btn"{{action 'updateAnswer' answer}}>Submit</button>
-      <button class="btn grey"{{action 'hideEditForm' }}>Close</button>
+
+      <button class="btn grey"{{action 'hideEditForm'}}>Close Edit</button>
+
+      <button {{action 'deleteAnswer' answer question}}class="btn deep-orange darken-3">Delete Answer</button>
     </form>
   </form>
 {{else}}

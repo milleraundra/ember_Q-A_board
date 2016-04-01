@@ -33,6 +33,12 @@ export default Ember.Route.extend({
       });
       answer.save();
       this.transitionTo('single-question');
+    },
+    deleteAnswer(answer, question) {
+      answer.destroyRecord().then(function(){
+        question.save();
+      });
+      this.transitionTo('single-question');
     }
   }
 });

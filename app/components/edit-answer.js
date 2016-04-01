@@ -16,6 +16,11 @@ export default Ember.Component.extend({
       console.log(params);
       this.sendAction('editAnswer', params, answer);
       this.set('isEditFormShowing', false);
+    },
+    deleteAnswer(answer, question) {
+      console.log(answer);
+      console.log(question);
+      this.sendAction('deleteAnswer', answer, question);
     }
   }
 });
