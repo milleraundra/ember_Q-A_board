@@ -16,6 +16,9 @@ export default Ember.Component.extend({
       };
       this.sendAction('createQuestion', params);
       this.set('isQuestionFormShowing', false);
+      this.set('question', "");
+      this.set('body', "");
+      this.set('author', "");
     }
   }
 });

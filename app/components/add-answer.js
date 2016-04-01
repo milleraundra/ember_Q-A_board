@@ -18,6 +18,8 @@ export default Ember.Component.extend({
       }
       this.sendAction('addAnswer', params);
       this.set('isAddAnswerShowing', false);
+      this.set('body', "");
+      this.set('author', "");
     }
   }
 });
