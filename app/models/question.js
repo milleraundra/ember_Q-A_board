@@ -4,5 +4,6 @@ export default DS.Model.extend({
   title: DS.attr(),
   question: DS.attr(),
   body: DS.attr(),
-  answers: DS.hasMany('answer', {async: true})  
+  date: DS.attr(),
+  answers: DS.hasMany('answer', {async: true})
 });

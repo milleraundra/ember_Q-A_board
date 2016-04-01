@@ -11,7 +11,10 @@ export default Ember.Component.extend({
         title: this.get('title') ? this.get('title') : "",
         question: this.get('question') ? this.get('question') : "",
         body: this.get('body') ? this.get('body') : "",
+        date: new Date()
       };
+      debugger;
+      console.log(params);
       this.sendAction('createQuestion', params);
       this.set('isQuestionFormShowing', false);
     }

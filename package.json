@@ -46,6 +46,10 @@
     "ember-radio-button": "1.0.7",
     "ember-resolver": "^2.0.3",
     "emberfire": "1.6.6",
-    "loader.js": "^4.0.0"
+    "loader.js": "^4.0.0",
+    "momentjs": "1.0.2"
+  },
+  "dependencies": {
+    "ember-moment": "^6.1.0"
   }
 }
