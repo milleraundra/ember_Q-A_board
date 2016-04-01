@@ -6,6 +6,9 @@ export default Ember.Component.extend({
     showQuestionForm() {
       this.set('isQuestionFormShowing', true);
     },
+    hideQuestionForm() {
+      this.set('isQuestionFormShowing', false);
+    },
     addQuestion() {
       //var moment = require('moment');
       var params = {

@@ -12,8 +12,9 @@
       <label for="body">Explanation:</label>
       {{textarea type="text" value=body}}
     </div>
-    <button {{action 'addQuestion'}}>Submit</button>
+    <button class="btn"{{action 'addQuestion'}}>Submit</button>
+    <button class="btn grey"{{action 'hideQuestionForm'}}>Close</button>
   </form>
 {{else}}
-  <button {{action 'showQuestionForm'}}>Ask Question</button>
+  <button class="btn"{{action 'showQuestionForm'}}>Ask Question</button>
 {{/if}}
