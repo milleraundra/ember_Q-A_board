@@ -8,7 +8,14 @@
           <br>
         <p>Asked by {{model.author}} on {{model.date}}</p>
         <div class="card-action">
-          <a class="btn deep-orange lighten-1">Answer</a>
+          <div class="row">
+            <div class="col s12 m5 l3">
+              <a class="btn deep-orange lighten-1">Answer</a>
+            </div>
+            <div class="col s12 m7 l9">
+              {{edit-question question=model updateQuestion="updateQuestion"}}
+            </div>
+          </div>
         </div>
       </div>
     </div>
