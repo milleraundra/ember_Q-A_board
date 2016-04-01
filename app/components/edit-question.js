@@ -6,6 +6,9 @@ export default Ember.Component.extend({
     showEditForm() {
       this.set('isEditFormShowing', true);
     },
+    hideEditForm() {
+      this.set('isEditFormShowing', false);
+    },
     updateQuestion(question) {
       var params = {
         question: this.get('question.question') ? this.get('question.question') : "",

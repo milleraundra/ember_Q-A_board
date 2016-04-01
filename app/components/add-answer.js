@@ -6,6 +6,9 @@ export default Ember.Component.extend({
     showAddAnswer() {
       this.set('isAddAnswerShowing', true);
     },
+    hideAddAnswer() {
+      this.set('isAddAnswerShowing', false);
+    },
     addAnswer() {
       var params = {
         body: this.get('body') ? this.get('body') : "",

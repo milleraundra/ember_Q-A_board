@@ -5,6 +5,7 @@
     <label for="body">Body:</label>
     {{textarea type="text" value=body}}
     <button {{ action 'addAnswer' }}class="btn">Submit</button>
+    <button {{ action 'hideAddAnswer' }}class="btn grey ">Close</button>
   </form>
 {{else}}
   <a {{action 'showAddAnswer'}}class="btn deep-orange lighten-1">Answer</a>

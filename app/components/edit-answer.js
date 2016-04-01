@@ -6,11 +6,16 @@ export default Ember.Component.extend({
     showEditForm() {
       this.set('isEditFormShowing', true);
     },
-    updateAnswer() {
+    hideEditForm() {
+      this.set('isEditFormShowing', false);
+    },
+    updateAnswer(answer) {
       var params = {
         body: this.get('answer.body') ? this.get('answer.body') : ""
       };
-      this.sendAction('editAnswer', params);
+      console.log(params);
+      this.sendAction('editAnswer', params, answer);
+      this.set('isEditFormShowing', false);
     }
   }
 });

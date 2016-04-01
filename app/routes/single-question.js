@@ -25,17 +25,14 @@ export default Ember.Route.extend({
       });
       this.transitionTo('single-question');
     },
-    // addAnswer2(question) {
-    //   var params = {
-    //     body: "Hi!",
-    //     author: "Aundra",
-    //     date: new Date(),
-    //     question: question
-    //   };
-    //   debugger;
-    //   var thing = this.store.createRecord('answer', params);
-    //   thing.save();
-    //   this.transitionTo('single-question');
-    // }
+    editAnswer(params, answer) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]) {
+          answer.set(key, params[key]);
+        }
+      });
+      answer.save();
+      this.transitionTo('single-question');
+    }
   }
 });
