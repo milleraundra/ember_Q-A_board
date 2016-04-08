@@ -26,15 +26,14 @@
         <!-- </div> -->
       </div>
     </div>
-  <h4>Answers:</h4>
-    {{#each model.answers as |answer|}}
-    {{answer-tile
-      answer=answer
-      question=model
+    <h4>Answers:</h4>
+    {{answers-display
+      answers=model.answers
+      model=model
       editAnswer="editAnswer"
       deleteAnswer="deleteAnswer"
       plusRating="plusRating"
-      decreaseRating="decreaseRating"}}
-    {{/each}}
+      decreaseRating="decreaseRating"
+    }}
   </div>
 </div>

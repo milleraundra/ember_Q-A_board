@@ -1,0 +1,9 @@
+{{#each sortedAnswers as |answer|}}
+{{answer-tile
+  answer=answer
+  question=model
+  editAnswer="editAnswer"
+  deleteAnswer="deleteAnswer"
+  plusRating="plusRating"
+  decreaseRating="decreaseRating"}}
+{{/each}}

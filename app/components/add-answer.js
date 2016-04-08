@@ -16,7 +16,7 @@ export default Ember.Component.extend({
         date: new Date(),
         rating: 0,
         question: this.get('question')
-      }
+      };
       this.sendAction('addAnswer', params);
       this.set('isAddAnswerShowing', false);
       this.set('body', "");
