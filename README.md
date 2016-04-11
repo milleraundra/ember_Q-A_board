@@ -24,10 +24,6 @@ You will need the following things properly installed on your computer.
 * `npm install`
 * `bower install`
 
-## Remaining Development
-
-* Sort answers by highest rating.
-
 ## Support and contact details
 
 If you have any questions, concerns, or suggestions, contact me directly at miller.aundra@gmail.com. Pull requests can be submitted directly to milleraundra on Github.
