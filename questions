@@ -1,5 +1,0 @@
-1. Could not get Moment working on add-question.js
-- tried
-  1. adding import at top: "import moment from 'moment'",
-  2. adding variable in addQuestion: var moment = require('moment');
-  3. leaving moment undefined - got error
